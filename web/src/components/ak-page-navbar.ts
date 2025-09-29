@@ -361,7 +361,7 @@ export class AKPageNavbar extends WithBrandConfig(AKElement) implements PageHead
                         <div class="logo">
                             <img
                                 src=${themeImage(this.brandingLogo)}
-                                alt="${msg("authentik Logo")}"
+                                alt="${msg("Feniks Global Logo")}"
                                 loading="lazy"
                             />
                         </div>

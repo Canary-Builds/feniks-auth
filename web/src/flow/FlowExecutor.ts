@@ -47,6 +47,8 @@ import PFLogin from "@patternfly/patternfly/components/Login/login.css";
 import PFTitle from "@patternfly/patternfly/components/Title/title.css";
 import PFBase from "@patternfly/patternfly/patternfly-base.css";
 
+const FENIKS_LOGO = "/media/feniks-logo.png";
+
 @customElement("ak-flow-executor")
 export class FlowExecutor
     extends WithCapabilitiesConfig(WithBrandConfig(Interface))
@@ -67,14 +69,56 @@ export class FlowExecutor
                 --pf-c-login__main-body--PaddingBottom: var(--pf-global--spacer--2xl);
             }
             .pf-c-background-image::before {
-                --pf-c-background-image--BackgroundImage: var(--ak-flow-background);
-                --pf-c-background-image--BackgroundImage-2x: var(--ak-flow-background);
-                --pf-c-background-image--BackgroundImage--sm: var(--ak-flow-background);
-                --pf-c-background-image--BackgroundImage--sm-2x: var(--ak-flow-background);
-                --pf-c-background-image--BackgroundImage--lg: var(--ak-flow-background);
+                background-image: none !important;
+                background-color: #212121 !important;
+                opacity: 1;
             }
             .ak-hidden {
                 display: none;
+            }
+            .pf-c-brand.ak-brand {
+                justify-content: center;
+                display: flex;
+                align-items: center;
+            }
+            .pf-c-brand.ak-brand img {
+                max-height: 110px;
+                width: auto;
+            }
+            .pf-c-login {
+                background: #212121;
+                color: #f5f5f5;
+            }
+            .pf-c-login__main-body,
+            .pf-c-login__main-header,
+            .pf-c-login__main {
+                color: #f5f5f5;
+            }
+            .pf-c-form-control {
+                background-color: #333333;
+                color: #f5f5f5;
+                border-color: #555555;
+            }
+            .pf-c-form-control::placeholder {
+                color: #bbbbbb;
+            }
+            .pf-c-form__label span {
+                color: #f5f5f5;
+            }
+            .pf-c-button.pf-m-primary {
+                background-color: #9F851A !important;
+                border-color: #9F851A !important;
+                color: #ffffff;
+            }
+            .pf-c-button.pf-m-primary:hover {
+                background-color: #b69b26 !important;
+                border-color: #b69b26 !important;
+            }
+            .pf-c-login__main-footer {
+                color: #bbbbbb;
+            }
+            .pf-c-login__footer a {
+                color: #bbbbbb;
             }
             :host {
                 position: relative;
@@ -566,8 +610,8 @@ export class FlowExecutor
                                                 class="pf-c-login__main-header pf-c-brand ak-brand"
                                             >
                                                 <img
-                                                    src="${themeImage(this.brandingLogo)}"
-                                                    alt="${msg("authentik Logo")}"
+                                                    src="${this.brandingLogo ? themeImage(this.brandingLogo) : FENIKS_LOGO}"
+                                                    alt="${msg("Feniks Global Logo")}"
                                                 />
                                             </div>
                                             ${until(this.renderChallenge())}

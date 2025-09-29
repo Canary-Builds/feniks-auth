@@ -99,7 +99,7 @@ export class APIBrowser extends WithBrandConfig(Interface) {
                 >
                     <div slot="nav-logo">
                         <img
-                            alt="${msg("authentik Logo")}"
+                            alt="${msg("Feniks Global Logo")}"
                             class="logo"
                             src="${themeImage(this.brandingLogo)}"
                         />

@@ -74,6 +74,12 @@ const customStyles = css`
     .pf-c-brand {
         min-height: 32px;
         height: 32px;
+        display: flex;
+        align-items: center;
+    }
+    .pf-c-brand img {
+        max-height: 40px;
+        width: auto;
     }
     .has-notifications {
         color: #2b9af3;
@@ -85,12 +91,10 @@ const customStyles = css`
         z-index: -1;
         top: 0;
         left: 0;
-        background-color: var(--pf-c-page--BackgroundColor) !important;
+        background-color: #212121 !important;
     }
     .background-default-slant {
-        background-color: white; /*var(--ak-accent);*/
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
-        height: 50vh;
+        display: none;
     }
     :host([theme="dark"]) .background-default-slant {
         background-color: black;

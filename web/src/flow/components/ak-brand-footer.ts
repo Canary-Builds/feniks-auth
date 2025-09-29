@@ -16,6 +16,17 @@ const styles = css`
     .pf-c-list a {
         color: unset;
     }
+    ul.pf-c-list.pf-m-inline li {
+        color: #bbbbbb;
+    }
+    ul.pf-c-list.pf-m-inline a {
+        color: #bbbbbb;
+        text-decoration: none;
+    }
+    ul.pf-c-list.pf-m-inline a:hover {
+        color: #d0d0d0;
+        text-decoration: underline;
+    }
     ul.pf-c-list.pf-m-inline {
         justify-content: center;
         padding: calc(var(--pf-global--spacer--xs) / 2) 0px;
@@ -44,7 +55,7 @@ export class BrandLinks extends AKElement {
                     <span> ${children}</span>
                 </li>`;
             })}
-            <li><span>${msg("Powered by authentik")}</span></li>
+            <li><a href="https://canarybuilds.com/" target="_blank" rel="noopener">${msg("Powered by Canary Builds")}</a></li>
         </ul>`;
     }
 }

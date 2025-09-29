@@ -87,7 +87,7 @@ export class AboutModal extends WithLicenseSummary(WithBrandConfig(ModalButton))
                         <img
                             class="pf-c-about-modal-box__brand-image"
                             src=${this.brandingFavicon}
-                            alt="${msg("authentik Logo")}"
+                            alt="${msg("Feniks Global Logo")}"
                         />
                     </div>
                     <div class="pf-c-about-modal-box__close">
