@@ -1,0 +1,14 @@
+# Authentik Customizations
+# This list tracks files modified for Feniks branding.
+
+blueprints/default/flow-default-authentication-flow.yaml
+blueprints/default/flow-default-source-authentication.yaml
+blueprints/default/flow-default-source-enrollment.yaml
+blueprints/default/flow-oobe.yaml
+media/feniks-logo.png
+web/src/admin/AdminInterface/AboutModal.ts
+web/src/components/ak-page-navbar.ts
+web/src/flow/FlowExecutor.ts
+web/src/flow/components/ak-brand-footer.ts
+web/src/standalone/api-browser/index.entrypoint.ts
+web/src/user/index.entrypoint.ts
